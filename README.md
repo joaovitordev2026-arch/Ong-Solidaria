@@ -89,3 +89,24 @@ A aplicação está preparada para Netlify, com:
 - comando de build: `npm run build`
 - diretório publicado: `dist`
 - redirecionamento de SPA configurado em `netlify.toml`
+## Testes e qualidade
+
+A aplicação foi validada em ambiente local e por meio da build de produção gerada com Vite. Os testes abrangeram navegação SPA, histórico do navegador, formulários, validações, localStorage, componentes de interface, responsividade e acessibilidade por teclado.
+
+Também foram utilizadas as ferramentas de desenvolvimento do navegador, incluindo Console, Network e inspeção do DOM, para identificar falhas de carregamento e comportamentos inesperados.
+
+A auditoria das dependências destinadas à produção foi executada com o comando `npm audit --omit=dev`, apresentando 0 vulnerabilidades de produção.
+
+## Fluxo Git e Conventional Commits
+
+O projeto adota uma estrutura baseada no GitFlow. A branch `main` representa a versão estável, enquanto `develop` concentra o desenvolvimento integrado.
+
+Novas alterações são realizadas em branches com o prefixo `feature/` e posteriormente integradas à `develop` por meio de Pull Requests.
+
+As mensagens de commit seguem o padrão Conventional Commits, com prefixos como `feat:`, `fix:`, `docs:`, `refactor:` e `chore:`. As versões estáveis seguem o Versionamento Semântico no formato `MAJOR.MINOR.PATCH`.
+
+## Métricas da build
+
+A build de produção foi gerada com Vite. A versão sem minificação apresentou 46.881 bytes, enquanto a versão minificada apresentou 36.709 bytes, correspondendo a uma redução aproximada de 21,70%.
+
+A redução incidiu principalmente sobre os ficheiros JavaScript e CSS, diminuindo o volume de dados necessário para publicação e transferência em rede.
