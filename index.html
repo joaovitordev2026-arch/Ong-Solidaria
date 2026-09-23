@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="pt-BR" data-theme="light" data-contrast="normal">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Plataforma web de uma ONG com projetos sociais, voluntariado e doações.">
+  <title>ONG Solidária</title>
+  <link rel="stylesheet" href="./css/style.css">
+  <link rel="stylesheet" href="https://unpkg.com/aos@2.3.1/dist/aos.css">
+</head>
+<body>
+  <a class="skip-link" href="#app">Pular para o conteúdo principal</a>
+
+  <header class="site-header">
+    <div class="container header-inner">
+      <a class="brand" href="./html/inicio.html" data-route="inicio" aria-label="ONG Solidária - página inicial">
+        ONG Solidária
+      </a>
+
+      <button
+        class="menu-toggle"
+        id="menu-toggle"
+        type="button"
+        aria-label="Abrir menu de navegação"
+        aria-controls="menu-principal"
+        aria-expanded="false">
+        <span aria-hidden="true">☰</span>
+      </button>
+
+      <nav class="navbar" aria-label="Navegação principal">
+        <ul class="menu" id="menu-principal">
+          <li><a href="./html/inicio.html" data-route="inicio">Início</a></li>
+          <li class="has-submenu">
+            <a href="./html/projetos.html" data-route="projetos">Projetos</a>
+            <ul class="submenu" aria-label="Submenu de projetos">
+              <li><a href="./html/projetos.html#voluntariado" data-route="projetos">Voluntariado</a></li>
+              <li><a href="./html/projetos.html#doacao" data-route="projetos">Doações</a></li>
+            </ul>
+          </li>
+          <li><a href="./html/cadastro.html" data-route="cadastro">Cadastro</a></li>
+        </ul>
+      </nav>
+
+      <div class="accessibility-actions" aria-label="Preferências visuais">
+        <button class="icon-button" id="theme-toggle" type="button" aria-pressed="false">
+          Modo escuro
+        </button>
+        <button class="icon-button" id="contrast-toggle" type="button" aria-pressed="false">
+          Alto contraste
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <main id="app" class="container" tabindex="-1" aria-live="polite"></main>
+
+  <footer class="site-footer">
+    <div class="container footer-inner">
+      <p>&copy; 2026 ONG Solidária</p>
+      <a href="./html/inicio.html" data-route="inicio">Voltar ao início</a>
+    </div>
+  </footer>
+
+  <div class="toast" id="toast" role="status" aria-live="polite" aria-atomic="true" hidden>
+    <span class="toast-icon" aria-hidden="true">✓</span>
+    <div>
+      <strong id="toast-title">Operação concluída</strong>
+      <p id="toast-message">A ação foi realizada com sucesso.</p>
+    </div>
+  </div>
+
+  <div class="modal-backdrop" id="modal-backdrop" hidden>
+    <section
+      class="modal"
+      id="modal"
+      role="dialog"
+      aria-modal="true"
+      aria-labelledby="modal-title"
+      aria-describedby="modal-description"
+      tabindex="-1">
+      <button class="modal-close" id="modal-close" type="button" aria-label="Fechar janela">×</button>
+      <h2 id="modal-title">Informação do projeto</h2>
+      <p id="modal-description">Detalhes adicionais serão apresentados aqui.</p>
+      <div class="modal-actions">
+        <button class="button button-primary" id="modal-confirm" type="button">Entendi</button>
+      </div>
+    </section>
+  </div>
+
+  <noscript>
+    <div class="noscript-warning">
+      O JavaScript está desativado. Utilize as páginas alternativas disponíveis no menu para navegar pelo conteúdo.
+    </div>
+  </noscript>
+
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+  <script type="module" src="./js/app.js"></script>
+</body>
+</html>

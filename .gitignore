@@ -1,0 +1,6 @@
+node_modules/
+dist/
+dist-unmin/
+.vscode/
+.DS_Store
+*.log
